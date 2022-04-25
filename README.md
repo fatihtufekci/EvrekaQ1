@@ -25,7 +25,7 @@ Run the following command to install the required packages.
 pip3 install -r requirements.txt 
 ```
 
-Eğer yukardaki adımda hata verdiyse;
+If it gave an error in the above step;
 ```sh
 pip3 install Django
 pip3 install python-dotenv
