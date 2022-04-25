@@ -18,12 +18,12 @@ Run the following commands respectively to create your own postgresql database a
 ```sh
 sudo -i -u postgres
 psql
-CREATE DATABASE your_project_name;
+CREATE DATABASE your_database_name;
 CREATE USER your_user_name WITH PASSWORD 'your_password';
 ALTER ROLE your_user_name SET client_encoding TO 'utf8';
 ALTER ROLE your_user_name SET default_transaction_isolation TO 'read committed';
 ALTER ROLE your_user_name SET timezone TO 'UTC';
-GRANT ALL PRIVILEGES ON DATABASE your_project_name TO your_user_name;
+GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_user_name;
 ALTER USER your_user_name CREATEDB;
 ```
 
