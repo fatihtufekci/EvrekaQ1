@@ -7,5 +7,6 @@ class NavigationRecordManager(models.Manager):
         return super().get_queryset()
     
     def get_last_points(self):
-        return super().get_queryset().select_related('vehicle').filter(datetime__gt=timezone.now() - timezone.timedelta(2)).order_by(
+        return super().get_queryset().select_related('vehicle').filter(
+            datetime__gt=timezone.now() - timezone.timedelta(2)).order_by(
                 'vehicle', '-datetime').distinct('vehicle')
